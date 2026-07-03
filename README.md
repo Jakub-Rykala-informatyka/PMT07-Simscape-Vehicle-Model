@@ -41,6 +41,19 @@ To run this model, you will need:
 5. Once the workspace variables are loaded, open the main Simulink model **`sm_car.slx`**.
 6. Click the **Run** button in Simulink to start the simulation.
 
+## Customizing for Future Cars (e.g., Next Season FSAE)
+
+This project is built using a script-based initialization architecture. To update the simulation parameters for a new vehicle, **do not manually edit the Simulink block masks**. Instead, modify the `.m` scripts and data files.
+
+1. **Chassis & Physics (Primary File):** 
+   Modify `Scripts_Data\Data_Vehicle\Vehicle_data_dwishbone.m` to update mass, inertia, CG, brakes, suspension geometry, and aerodynamics.
+2. **Battery Parameters:** 
+   Update or replace `PMT07.m` with your new battery cell characterization, or modify the default scripts `Vehicle_data_Battery_Cell.m` and `Vehicle_data_Battery_Pack.m`.
+3. **Tires:** 
+   Provide a new Pacejka Magic Formula (`.tir`) file in `Libraries\Vehicle\Body\Tires\` and update the Tire block references if you switch tire manufacturers.
+4. **3D Visuals (CAD):** 
+   To update the car's visual representation in the Mechanics Explorer, export your new frame/body as `.STL` files. Replace the existing files in `Libraries\Vehicle\Body\CAD\FSAE_Achilles\Parts\` with your new meshes, keeping the exact same file names.
+
 ## Analyzing Data
 
 *   Use the **Mechanics Explorer** window that pops up to view the 3D animation of the car during the maneuver.
