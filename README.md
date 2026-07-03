@@ -41,11 +41,11 @@ To run this model, you will need:
 5. Once the workspace variables are loaded, open the main Simulink model **`sm_car.slx`**.
 6. Click the **Run** button in Simulink to start the simulation.
 
-## Customizing for Future Cars (e.g., Next Season FSAE)
+## Customizing for Future Cars
 
 This project is built using a script-based initialization architecture. To update the simulation parameters for a new vehicle, **do not manually edit the Simulink block masks**. Instead, modify the `.m` scripts and data files.
 
-1. **Chassis & Physics (Primary File):** 
+1. **Chassis & Physics:** 
    Modify `Scripts_Data\Data_Vehicle\Vehicle_data_dwishbone.m` to update mass, inertia, CG, brakes, suspension geometry, and aerodynamics.
 2. **Battery Parameters:** 
    Update or replace `PMT07.m` with your new battery cell characterization, or modify the default scripts `Vehicle_data_Battery_Cell.m` and `Vehicle_data_Battery_Pack.m`.
