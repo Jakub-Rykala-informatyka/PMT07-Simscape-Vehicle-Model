@@ -1,0 +1,26 @@
+# Pliki tymczasowe MATLABa i zrzuty autozapisu
+*.asv
+*.m~
+*.autosave
+*.autosave.*
+*.bak
+
+# Skompilowane modele Simulinka i cache Simscape
+*.slxc
+*.ssc_slxc
+slprj/
+sfprj/
+
+# Skompilowane binarki (np. C-code)
+*.mexw64
+*.mexw32
+*.mex
+
+# Zrzuty pamięci i logi błędów
+matlab_crash_dump.*
+*.log
+
+# Oprócz naszych celowych plików danych (parametry.mat jest nam potrzebne, wiec nie ignorujemy globalnie wszystkich *.mat)
+# Jeśli byś chciał zignorować wszystkie .mat oprócz parametry, usuń komentarz poniżej:
+# *.mat
+# !parametry.mat
